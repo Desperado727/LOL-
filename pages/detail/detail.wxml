@@ -1,0 +1,21 @@
+<!-- 项目图片部分 -->
+<image class="proImage" src="/img/p1.png"></image>
+
+<view class="wapper">
+  <!-- 项目介绍 -->
+  <view class="proInfo">
+    <text class="proname">项目名称</text>
+    <text class="proprice">价格：￥288</text>
+    <view class="proexplain">项目介绍</view>
+  </view>
+
+  <!-- 详情描述 -->
+  <view>
+    <view class="miaoshu">详情描述</view>
+    
+    <text user-select="true">操作步骤</text>
+  </view>
+</view>
+
+<!-- 立即预定按钮 -->
+<button style="width:90%" bindtap="yuding" data-id="1">立即预定</button>

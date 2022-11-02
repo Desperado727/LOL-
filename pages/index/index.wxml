@@ -1,0 +1,135 @@
+<scroll-view style="height:100%" scroll-y="true"  bindscrolltolower="lower">
+
+<!-- 第一部分-轮播图 -->
+<swiper indicator-dots="true"
+        autoplay="true" interval="5000" duration="500" circular="true">
+      <!-- 循环数据 每一个数据item-->
+      <!-- <block wx:for="{{banners}}" wx:key="*this"> -->
+        <swiper-item>
+          <image class="banImage" src="/img/banner_01.png"></image>
+        </swiper-item>
+        <swiper-item>
+          <image class="banImage" src="/img/banner_02.png"></image>
+        </swiper-item>
+        <swiper-item>
+          <image class="banImage" src="/img/banner_03.png"></image>
+        </swiper-item>
+        <swiper-item>
+          <image class="banImage" src="/img/banner_04.png"></image>
+        </swiper-item>
+      <!-- </block> -->
+</swiper>
+
+<!-- 第二部分  菜单 -->
+<view class="nav">
+  <!-- <block wx:for="{{navs}}" wx:key="*this"> -->
+      <view bindtap="navDetail" data-type="{{item.imagetitle}}" class="nav-item">
+        <image src="/img/nav_icon_01.png"></image>
+        <view>推荐</view>
+      </view>
+      <view bindtap="navDetail" data-type="{{item.imagetitle}}" class="nav-item">
+        <image src="/img/nav_icon_02.png"></image>
+        <view>美甲</view>
+      </view>
+      <view bindtap="navDetail" data-type="{{item.imagetitle}}" class="nav-item">
+        <image src="/img/nav_icon_03.png"></image>
+        <view>美容</view>
+      </view>
+      <view bindtap="navDetail" data-type="{{item.imagetitle}}" class="nav-item">
+        <image src="/img/nav_icon_04.png"></image>
+        <view>美发</view>
+      </view>
+      <view bindtap="navDetail" data-type="{{item.imagetitle}}" class="nav-item">
+        <image src="/img/nav_icon_05.png"></image>
+        <view>睫毛</view>
+      </view>
+  <!-- </block> -->
+</view>
+
+
+<!-- 第三部分 -->
+<view class="proInfos">
+    <!-- <block wx:for="{{pros}}" wx:key="*this"> -->
+      <!-- 单个产品【推荐】 -->
+      <view class="product" bindtap="proDetail" data-proid="{{item.id}}">
+        <!-- 产品图片 -->
+        <image src="/img/p1.png"></image>
+        <view class="info">
+          <view class="info-t">
+          <!-- 左 -->
+            <view >
+              <view class="proname" style="font-size:36rpx;font-weight:bold">纯色甲油+磨砂</view>
+              <view style="font-size:36rpx;color:orange;margin-top:20rpx">价格￥88</view>
+            </view>
+            <!-- 右 -->
+            <view class="yueyu" catchtap="orderTap" data-id="{{item.id}}">预约</view>
+          </view>
+          <view class="proInfo" style="font-size:26rpx;color:#999;margin-top:10rpx">甲油胶的成分，描述信息</view>
+        </view>
+      </view>
+    
+       <view class="product" bindtap="proDetail" data-proid="{{item.id}}">
+        <!-- 产品图片 -->
+        <image src="/img/p2.png"></image>
+        <view class="info">
+          <view class="info-t">
+          <!-- 左 -->
+            <view >
+              <view class="proname" style="font-size:36rpx;font-weight:bold">金牌美发</view>
+              <view style="font-size:36rpx;color:orange;margin-top:20rpx">价格￥288</view>
+            </view>
+            <!-- 右 -->
+            <view class="yueyu" catchtap="orderTap" data-id="{{item.id}}">预约</view>
+          </view>
+          <view class="proInfo" style="font-size:26rpx;color:#999;margin-top:10rpx">甲油胶的成分，描述信息</view>
+        </view>
+      </view>
+    
+      <view class="product" bindtap="proDetail" data-proid="{{item.id}}">
+        <!-- 产品图片 -->
+        <image src="/img/p3.png"></image>
+        <view class="info">
+          <view class="info-t">
+          <!-- 左 -->
+            <view >
+              <view class="proname" style="font-size:36rpx;font-weight:bold">头部按摩</view>
+              <view style="font-size:36rpx;color:orange;margin-top:20rpx">价格￥239</view>
+            </view>
+            <!-- 右 -->
+            <view class="yueyu" catchtap="orderTap" data-id="{{item.id}}">预约</view>
+          </view>
+          <view class="proInfo" style="font-size:26rpx;color:#999;margin-top:10rpx">甲油胶的成分，描述信息</view>
+        </view>
+      </view>
+    
+    <view class="product" bindtap="proDetail" data-proid="{{item.id}}">
+        <!-- 产品图片 -->
+        <image src="/img/p4.png"></image>
+        <view class="info">
+          <view class="info-t">
+          <!-- 左 -->
+            <view >
+              <view class="proname" style="font-size:36rpx;font-weight:bold">指甲</view>
+              <view style="font-size:36rpx;color:orange;margin-top:20rpx">价格￥18</view>
+            </view>
+            <!-- 右 -->
+            <view class="yueyu" catchtap="orderTap" data-id="{{item.id}}">预约</view>
+          </view>
+          <view class="proInfo" style="font-size:26rpx;color:#999;margin-top:10rpx">甲油胶的成分，描述信息</view>
+        </view>
+      </view>
+    
+    
+    
+    
+    <!-- </block> -->
+
+ <block wx:if="{{isData}}">
+    <view class="loadMore">正在加载中...</view>
+  </block>
+  <block wx:else>
+    <view class="loadMore">我也是有底线的</view>
+  </block>
+</view>
+
+</scroll-view>

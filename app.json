@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/start/start",
+    "pages/tecDetail/tecDetail",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/navDetail/navDetail",
+    "pages/my/my",
+    "pages/detail/detail",
+    "pages/order/order",
+    "pages/technician/technician"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#d24a58",
+    "navigationBarTitleText": "美容平台",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"/img/index_icon.png",
+        "selectedIconPath":"/img/index_icon_HL.png"
+      },
+      {
+        "pagePath": "pages/technician/technician",
+        "text": "技师",
+        "iconPath":"/img/skill_icon.png",
+        "selectedIconPath":"/img/skill_icon_HL.png"
+      }
+      ,
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath":"/img/user_icon.png",
+        "selectedIconPath":"/img/user_icon_HL.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
